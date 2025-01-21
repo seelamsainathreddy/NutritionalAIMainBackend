@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.api.ArticlesApiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:15:59" hostname="Siddharthas-MacBook-Air.local" time="0.181">
+  <properties/>
+  <testcase name="should_get_error_message_with_duplicated_title()" classname="io.spring.api.ArticlesApiTest" time="0.058"/>
+  <testcase name="should_get_error_message_with_wrong_parameter()" classname="io.spring.api.ArticlesApiTest" time="0.041"/>
+  <testcase name="should_create_article_success()" classname="io.spring.api.ArticlesApiTest" time="0.08"/>
+  <system-out><![CDATA[2025-01-19 23:45:59.435  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.api.ArticlesApiTest], using SpringBootContextLoader
+2025-01-19 23:45:59.436  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.api.ArticlesApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:45:59.436  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.api.ArticlesApiTest]: ArticlesApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:45:59.438  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.api.ArticlesApiTest
+2025-01-19 23:45:59.439  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:45:59.440  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@568cc1c5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@536e3aab, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@14d3bee8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3118a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@30b16aa6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1228a579, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b856d2a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@392a091, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@384d0e1f, org.springframework.test.context.event.EventPublishingTestExecutionListener@6f997702, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5f45abe6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@49c51eb7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1928dc66, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3dad8926, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4fc50fee, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2e949007, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7180b25f]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:45:59.457  INFO 51142 --- [    Test worker] io.spring.api.ArticlesApiTest            : Starting ArticlesApiTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:45:59.457  INFO 51142 --- [    Test worker] io.spring.api.ArticlesApiTest            : No active profile set, falling back to default profiles: default
+2025-01-19 23:45:59.677  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f88db3e0-2426-4dd4-ba4e-c6f25d81eab3
+
+2025-01-19 23:45:59.714  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3947bad4, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f798e5a, org.springframework.security.web.header.HeaderWriterFilter@2c6ee031, org.springframework.web.filter.CorsFilter@64d691b2, org.springframework.security.web.authentication.logout.LogoutFilter@4f8a0f4e, io.spring.api.security.JwtTokenFilter@6074f8f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cbbc0ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@570fc662, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c083cec, org.springframework.security.web.session.SessionManagementFilter@7ff89dc0, org.springframework.security.web.access.ExceptionTranslationFilter@72722a6b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e9650d3]
+2025-01-19 23:45:59.882  INFO 51142 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-19 23:45:59.883  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-19 23:45:59.883  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-01-19 23:45:59.892  INFO 51142 --- [    Test worker] io.spring.api.ArticlesApiTest            : Started ArticlesApiTest in 0.449 seconds (JVM running for 11.033)
+422 Validation failed for argument [0] in public org.springframework.http.ResponseEntity io.spring.api.ArticlesApi.createArticle(io.spring.application.article.NewArticleParam,io.spring.core.user.User): [Field error in object 'newArticleParam' on field 'title': rejected value [How to train your dragon]; codes [DuplicatedArticleConstraint.newArticleParam.title,DuplicatedArticleConstraint.title,DuplicatedArticleConstraint.java.lang.String,DuplicatedArticleConstraint]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [newArticleParam.title,title]; arguments []; default message [title]]; default message [article name exists]] 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "errors": {
+        "title": [
+            "article name exists"
+        ]
+    }
+}
+422 Validation failed for argument [0] in public org.springframework.http.ResponseEntity io.spring.api.ArticlesApi.createArticle(io.spring.application.article.NewArticleParam,io.spring.core.user.User): [Field error in object 'newArticleParam' on field 'body': rejected value []; codes [NotBlank.newArticleParam.body,NotBlank.body,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [newArticleParam.body,body]; arguments []; default message [body]]; default message [can't be empty]] 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "errors": {
+        "body": [
+            "can't be empty"
+        ]
+    }
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

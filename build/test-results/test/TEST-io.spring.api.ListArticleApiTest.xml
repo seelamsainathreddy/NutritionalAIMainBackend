@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.api.ListArticleApiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:16:01" hostname="Siddharthas-MacBook-Air.local" time="0.035">
+  <properties/>
+  <testcase name="should_get_default_article_list()" classname="io.spring.api.ListArticleApiTest" time="0.018"/>
+  <testcase name="should_get_feeds_success()" classname="io.spring.api.ListArticleApiTest" time="0.008"/>
+  <testcase name="should_get_feeds_401_without_login()" classname="io.spring.api.ListArticleApiTest" time="0.006"/>
+  <system-out><![CDATA[2025-01-19 23:46:01.396  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.api.ListArticleApiTest], using SpringBootContextLoader
+2025-01-19 23:46:01.397  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.api.ListArticleApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:46:01.397  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.api.ListArticleApiTest]: ListArticleApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:46:01.399  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.api.ListArticleApiTest
+2025-01-19 23:46:01.399  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:46:01.399  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d6e3e42, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@103388c6, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@14221dc6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2fbd6df8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@232dda63, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f541378, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b1cf779, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f0a9d4f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@22b9ac0f, org.springframework.test.context.event.EventPublishingTestExecutionListener@2df9b4f3, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@6112390a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ac92082, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@35ff3600, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55c14260, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@256bfbbb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@363502a4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7ab66d54]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:46:01.415  INFO 51142 --- [    Test worker] io.spring.api.ListArticleApiTest         : Starting ListArticleApiTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:46:01.415  INFO 51142 --- [    Test worker] io.spring.api.ListArticleApiTest         : No active profile set, falling back to default profiles: default
+2025-01-19 23:46:01.644  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4b5972e7-249c-4b82-9f11-5eb270c83f7f
+
+2025-01-19 23:46:01.698  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cc20add, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e452d2b, org.springframework.security.web.header.HeaderWriterFilter@6790aad2, org.springframework.web.filter.CorsFilter@3b577709, org.springframework.security.web.authentication.logout.LogoutFilter@24d25c43, io.spring.api.security.JwtTokenFilter@452bddc0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37a1ac0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@615ef647, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48fdd829, org.springframework.security.web.session.SessionManagementFilter@1e418480, org.springframework.security.web.access.ExceptionTranslationFilter@5c5432d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@716f968a]
+2025-01-19 23:46:01.976  INFO 51142 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-19 23:46:01.976  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-19 23:46:01.977  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-01-19 23:46:01.986  INFO 51142 --- [    Test worker] io.spring.api.ListArticleApiTest         : Started ListArticleApiTest in 0.585 seconds (JVM running for 13.128)
+200
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "articles": [
+        {
+            "id": "1id",
+            "slug": "title-1",
+            "title": "title 1",
+            "description": "desc 1",
+            "body": "body 1",
+            "favorited": false,
+            "favoritesCount": 0,
+            "createdAt": "2025-01-19T18:16:01.993Z",
+            "updatedAt": "2025-01-19T18:16:01.993Z",
+            "tagList": [
+                
+            ],
+            "cursor": {
+                "data": "2025-01-19T18:16:01.993Z"
+            },
+            "author": {
+                "username": "johnjacob",
+                "bio": "",
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            }
+        },
+        {
+            "id": "2id",
+            "slug": "title-2",
+            "title": "title 2",
+            "description": "desc 2",
+            "body": "body 2",
+            "favorited": false,
+            "favoritesCount": 0,
+            "createdAt": "2025-01-19T18:16:01.994Z",
+            "updatedAt": "2025-01-19T18:16:01.994Z",
+            "tagList": [
+                
+            ],
+            "cursor": {
+                "data": "2025-01-19T18:16:01.994Z"
+            },
+            "author": {
+                "username": "johnjacob",
+                "bio": "",
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            }
+        }
+    ],
+    "articlesCount": 2
+}
+200
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "articles": [
+        {
+            "id": "1id",
+            "slug": "title-1",
+            "title": "title 1",
+            "description": "desc 1",
+            "body": "body 1",
+            "favorited": false,
+            "favoritesCount": 0,
+            "createdAt": "2025-01-19T18:16:02.010Z",
+            "updatedAt": "2025-01-19T18:16:02.010Z",
+            "tagList": [
+                
+            ],
+            "cursor": {
+                "data": "2025-01-19T18:16:02.010Z"
+            },
+            "author": {
+                "username": "johnjacob",
+                "bio": "",
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            }
+        },
+        {
+            "id": "2id",
+            "slug": "title-2",
+            "title": "title 2",
+            "description": "desc 2",
+            "body": "body 2",
+            "favorited": false,
+            "favoritesCount": 0,
+            "createdAt": "2025-01-19T18:16:02.010Z",
+            "updatedAt": "2025-01-19T18:16:02.010Z",
+            "tagList": [
+                
+            ],
+            "cursor": {
+                "data": "2025-01-19T18:16:02.010Z"
+            },
+            "author": {
+                "username": "johnjacob",
+                "bio": "",
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            }
+        }
+    ],
+    "articlesCount": 2
+}
+401
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

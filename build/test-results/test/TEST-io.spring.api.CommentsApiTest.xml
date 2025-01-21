@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.api.CommentsApiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:16:00" hostname="Siddharthas-MacBook-Air.local" time="0.095">
+  <properties/>
+  <testcase name="should_create_comment_success()" classname="io.spring.api.CommentsApiTest" time="0.032"/>
+  <testcase name="should_get_403_if_not_author_of_article_or_author_of_comment_when_delete_comment()" classname="io.spring.api.CommentsApiTest" time="0.012"/>
+  <testcase name="should_get_comments_of_article_success()" classname="io.spring.api.CommentsApiTest" time="0.018"/>
+  <testcase name="should_delete_comment_success()" classname="io.spring.api.CommentsApiTest" time="0.007"/>
+  <testcase name="should_get_422_with_empty_body()" classname="io.spring.api.CommentsApiTest" time="0.022"/>
+  <system-out><![CDATA[2025-01-19 23:46:00.077  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.api.CommentsApiTest], using SpringBootContextLoader
+2025-01-19 23:46:00.078  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.api.CommentsApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:46:00.078  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.api.CommentsApiTest]: CommentsApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:46:00.081  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.api.CommentsApiTest
+2025-01-19 23:46:00.081  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:46:00.081  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@616f1c2e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e58f36d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@11f633f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3662309d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f75c413, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61f990b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c63146c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5b2235a5, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5af6378e, org.springframework.test.context.event.EventPublishingTestExecutionListener@205b3a1a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@447f9a09, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@eba003e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@659b0c20, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1c696163, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@247e1f35, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7a1b4074, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@475cb91b]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:46:00.095  INFO 51142 --- [    Test worker] io.spring.api.CommentsApiTest            : Starting CommentsApiTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:46:00.095  INFO 51142 --- [    Test worker] io.spring.api.CommentsApiTest            : No active profile set, falling back to default profiles: default
+2025-01-19 23:46:00.409  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 83874819-410c-4baa-a212-c60bfc0cdb39
+
+2025-01-19 23:46:00.479  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b255b15, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fcc32ae, org.springframework.security.web.header.HeaderWriterFilter@3405202c, org.springframework.web.filter.CorsFilter@2165828d, org.springframework.security.web.authentication.logout.LogoutFilter@7d4a6213, io.spring.api.security.JwtTokenFilter@3540d5e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ef53e42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43ec61f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a325aa, org.springframework.security.web.session.SessionManagementFilter@dffa7ce, org.springframework.security.web.access.ExceptionTranslationFilter@42c661d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ddd3150]
+2025-01-19 23:46:00.672  INFO 51142 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-19 23:46:00.672  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-19 23:46:00.672  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-01-19 23:46:00.682  INFO 51142 --- [    Test worker] io.spring.api.CommentsApiTest            : Started CommentsApiTest in 0.599 seconds (JVM running for 11.824)
+200
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "comments": [
+        {
+            "id": "3d985e57-1588-49c2-81d9-af990cc9d8a9",
+            "body": "comment",
+            "createdAt": "2025-01-19T18:16:00.733Z",
+            "updatedAt": "2025-01-19T18:16:00.733Z",
+            "cursor": {
+                "data": "2025-01-19T18:16:00.733Z"
+            },
+            "author": {
+                "username": "johnjacob",
+                "bio": "",
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            }
+        }
+    ]
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

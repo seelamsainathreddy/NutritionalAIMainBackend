@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.api.UsersApiTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:16:03" hostname="Siddharthas-MacBook-Air.local" time="0.573">
+  <properties/>
+  <testcase name="should_login_success()" classname="io.spring.api.UsersApiTest" time="0.424"/>
+  <testcase name="should_create_user_success()" classname="io.spring.api.UsersApiTest" time="0.056"/>
+  <testcase name="should_show_error_message_for_invalid_email()" classname="io.spring.api.UsersApiTest" time="0.022"/>
+  <testcase name="should_show_error_for_duplicated_username()" classname="io.spring.api.UsersApiTest" time="0.017"/>
+  <testcase name="should_show_error_for_duplicated_email()" classname="io.spring.api.UsersApiTest" time="0.014"/>
+  <testcase name="should_show_error_message_for_blank_username()" classname="io.spring.api.UsersApiTest" time="0.016"/>
+  <testcase name="should_fail_login_with_wrong_password()" classname="io.spring.api.UsersApiTest" time="0.019"/>
+  <system-out><![CDATA[2025-01-19 23:46:02.464  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.api.UsersApiTest], using SpringBootContextLoader
+2025-01-19 23:46:02.465  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.api.UsersApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:46:02.465  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.api.UsersApiTest]: UsersApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:46:02.466  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.api.UsersApiTest
+2025-01-19 23:46:02.467  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:46:02.467  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a281ae0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@55c445e5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7144cd51, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@28fb3476, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@228ec493, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5592464a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26b37ec, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7342eb53, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@27bc13f4, org.springframework.test.context.event.EventPublishingTestExecutionListener@605ba15f, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3bd42eef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fa842b5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@184cd907, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@25a0c208, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f993305, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@223973a9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5c430208]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:46:02.478  INFO 51142 --- [    Test worker] io.spring.api.UsersApiTest               : Starting UsersApiTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:46:02.478  INFO 51142 --- [    Test worker] io.spring.api.UsersApiTest               : No active profile set, falling back to default profiles: default
+2025-01-19 23:46:02.728  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6291af62-f44f-43c5-bd3b-b2f2663e26ac
+
+2025-01-19 23:46:02.796  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@311d2611, org.springframework.security.web.context.SecurityContextPersistenceFilter@4abf5165, org.springframework.security.web.header.HeaderWriterFilter@47174ef0, org.springframework.web.filter.CorsFilter@10c0d39d, org.springframework.security.web.authentication.logout.LogoutFilter@39eab380, io.spring.api.security.JwtTokenFilter@5b11b6c8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d862f5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@409b96d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c026825, org.springframework.security.web.session.SessionManagementFilter@6415a53d, org.springframework.security.web.access.ExceptionTranslationFilter@77c001d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@460a31ce]
+2025-01-19 23:46:03.004  INFO 51142 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-19 23:46:03.004  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-19 23:46:03.005  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-01-19 23:46:03.019  INFO 51142 --- [    Test worker] io.spring.api.UsersApiTest               : Started UsersApiTest in 0.551 seconds (JVM running for 14.161)
+422 Validation failed for argument [0] in public org.springframework.http.ResponseEntity io.spring.api.UsersApi.createUser(io.spring.application.user.RegisterParam): [Field error in object 'registerParam' on field 'email': rejected value [johnxjacob.com]; codes [Email.registerParam.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerParam.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@ba59da9,.*]; default message [should be an email]] 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "errors": {
+        "email": [
+            "should be an email"
+        ]
+    }
+}
+422 Validation failed for argument [0] in public org.springframework.http.ResponseEntity io.spring.api.UsersApi.createUser(io.spring.application.user.RegisterParam): [Field error in object 'registerParam' on field 'username': rejected value [johnjacob]; codes [DuplicatedUsernameConstraint.registerParam.username,DuplicatedUsernameConstraint.username,DuplicatedUsernameConstraint.java.lang.String,DuplicatedUsernameConstraint]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerParam.username,username]; arguments []; default message [username]]; default message [duplicated username]] 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "errors": {
+        "username": [
+            "duplicated username"
+        ]
+    }
+}
+422 Validation failed for argument [0] in public org.springframework.http.ResponseEntity io.spring.api.UsersApi.createUser(io.spring.application.user.RegisterParam): [Field error in object 'registerParam' on field 'username': rejected value []; codes [NotBlank.registerParam.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerParam.username,username]; arguments []; default message [username]]; default message [can't be empty]] 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "errors": {
+        "username": [
+            "can't be empty"
+        ]
+    }
+}
+2025-01-19 23:46:03.582  WARN 51142 --- [    Test worker] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+422 invalid email or password
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "message": "invalid email or password"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

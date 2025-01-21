@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.api.ProfileApiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:16:02" hostname="Siddharthas-MacBook-Air.local" time="0.036">
+  <properties/>
+  <testcase name="should_unfollow_user_success()" classname="io.spring.api.ProfileApiTest" time="0.011"/>
+  <testcase name="should_follow_user_success()" classname="io.spring.api.ProfileApiTest" time="0.008"/>
+  <testcase name="should_get_user_profile_success()" classname="io.spring.api.ProfileApiTest" time="0.015"/>
+  <system-out><![CDATA[2025-01-19 23:46:02.026  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.api.ProfileApiTest], using SpringBootContextLoader
+2025-01-19 23:46:02.026  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.api.ProfileApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:46:02.026  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.api.ProfileApiTest]: ProfileApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:46:02.028  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.api.ProfileApiTest
+2025-01-19 23:46:02.028  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:46:02.029  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49443539, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@352ad7fe, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@97f2dbb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6027f461, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@822e8a1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b544b7c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1bb6a158, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@446dcab3, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5b95557f, org.springframework.test.context.event.EventPublishingTestExecutionListener@1253fada, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3cc135a9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@165348d0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@679cd9c8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a146acb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5fcd665d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5354b0bc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52076187]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:46:02.042  INFO 51142 --- [    Test worker] io.spring.api.ProfileApiTest             : Starting ProfileApiTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:46:02.042  INFO 51142 --- [    Test worker] io.spring.api.ProfileApiTest             : No active profile set, falling back to default profiles: default
+2025-01-19 23:46:02.216  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 83349f4c-39ae-40ad-95ca-2d65b19312d8
+
+2025-01-19 23:46:02.258  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e1ece3d, org.springframework.security.web.context.SecurityContextPersistenceFilter@46c87d4b, org.springframework.security.web.header.HeaderWriterFilter@c2c496d, org.springframework.web.filter.CorsFilter@3b6a4aa1, org.springframework.security.web.authentication.logout.LogoutFilter@1ea83b58, io.spring.api.security.JwtTokenFilter@52790b52, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6984d41a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70d8f66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bc1eaa7, org.springframework.security.web.session.SessionManagementFilter@76ed5e7e, org.springframework.security.web.access.ExceptionTranslationFilter@2771025a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1fe2da60]
+2025-01-19 23:46:02.408  INFO 51142 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-19 23:46:02.408  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-19 23:46:02.412  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-01-19 23:46:02.424  INFO 51142 --- [    Test worker] io.spring.api.ProfileApiTest             : Started ProfileApiTest in 0.394 seconds (JVM running for 13.565)
+200
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "profile": {
+        "username": "username",
+        "bio": "",
+        "image": "",
+        "following": false
+    }
+}
+200
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "profile": {
+        "username": "username",
+        "bio": "",
+        "image": "",
+        "following": false
+    }
+}
+200
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "profile": {
+        "username": "username",
+        "bio": "",
+        "image": "",
+        "following": false
+    }
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

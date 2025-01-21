@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.api.CurrentUserApiTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:16:01" hostname="Siddharthas-MacBook-Air.local" time="0.175">
+  <properties/>
+  <testcase name="should_get_401_with_invalid_token()" classname="io.spring.api.CurrentUserApiTest" time="0.01"/>
+  <testcase name="should_get_401_if_not_login()" classname="io.spring.api.CurrentUserApiTest" time="0.008"/>
+  <testcase name="should_get_current_user_with_token()" classname="io.spring.api.CurrentUserApiTest" time="0.066"/>
+  <testcase name="should_get_error_if_email_exists_when_update_user_profile()" classname="io.spring.api.CurrentUserApiTest" time="0.064"/>
+  <testcase name="should_update_current_user_profile()" classname="io.spring.api.CurrentUserApiTest" time="0.017"/>
+  <testcase name="should_get_401_without_token()" classname="io.spring.api.CurrentUserApiTest" time="0.006"/>
+  <system-out><![CDATA[2025-01-19 23:46:00.782  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.api.CurrentUserApiTest], using SpringBootContextLoader
+2025-01-19 23:46:00.782  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.api.CurrentUserApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:46:00.782  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.api.CurrentUserApiTest]: CurrentUserApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:46:00.784  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.api.CurrentUserApiTest
+2025-01-19 23:46:00.785  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:46:00.785  INFO 51142 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5b9037b6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6887e1d1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1f878eed, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2ef2fa78, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74055597, org.springframework.test.context.support.DirtiesContextTestExecutionListener@235babaf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@88b9cf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3910a29c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6767f1c4, org.springframework.test.context.event.EventPublishingTestExecutionListener@199f2854, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5c9cbc69, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@60a4e124, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3815c525, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58a887fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@61ee1773, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@268467ab, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@30aeb2b3]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:46:00.797  INFO 51142 --- [    Test worker] io.spring.api.CurrentUserApiTest         : Starting CurrentUserApiTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:46:00.797  INFO 51142 --- [    Test worker] io.spring.api.CurrentUserApiTest         : No active profile set, falling back to default profiles: default
+2025-01-19 23:46:00.991  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b7f45e4b-7fc7-49be-97f1-c6b824cce4ba
+
+2025-01-19 23:46:01.041  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bf75275, org.springframework.security.web.context.SecurityContextPersistenceFilter@78c7a736, org.springframework.security.web.header.HeaderWriterFilter@6ae30b05, org.springframework.web.filter.CorsFilter@4896f287, org.springframework.security.web.authentication.logout.LogoutFilter@7988fd6e, io.spring.api.security.JwtTokenFilter@6362dcf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1dabeb92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fe27001, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e4e39a0, org.springframework.security.web.session.SessionManagementFilter@52602c48, org.springframework.security.web.access.ExceptionTranslationFilter@32daea66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41058886]
+2025-01-19 23:46:01.209  INFO 51142 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-19 23:46:01.209  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-19 23:46:01.210  INFO 51142 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-01-19 23:46:01.217  INFO 51142 --- [    Test worker] io.spring.api.CurrentUserApiTest         : Started CurrentUserApiTest in 0.431 seconds (JVM running for 12.359)
+422 updateUser.command.email: email already exist
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+
+{
+    "errors": {
+        "email": [
+            "email already exist"
+        ]
+    }
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

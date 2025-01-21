@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.spring.infrastructure.article.ArticleRepositoryTransactionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-19T18:16:06" hostname="Siddharthas-MacBook-Air.local" time="0.066">
+  <properties/>
+  <testcase name="transactional_test()" classname="io.spring.infrastructure.article.ArticleRepositoryTransactionTest" time="0.066"/>
+  <system-out><![CDATA[2025-01-19 23:46:05.206  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.spring.infrastructure.article.ArticleRepositoryTransactionTest], using SpringBootContextLoader
+2025-01-19 23:46:05.206  INFO 51142 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.spring.infrastructure.article.ArticleRepositoryTransactionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-01-19 23:46:05.207  INFO 51142 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.spring.infrastructure.article.ArticleRepositoryTransactionTest]: ArticleRepositoryTransactionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-19 23:46:05.212  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.spring.RealWorldApplication for test class io.spring.infrastructure.article.ArticleRepositoryTransactionTest
+2025-01-19 23:46:05.212  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-01-19 23:46:05.213  INFO 51142 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@116d3f22, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3ab815ab, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3140ee29, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7973d55a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19f7179, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7b7039ac, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d77a14d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2ac974bc, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@50a7dc25, org.springframework.test.context.event.EventPublishingTestExecutionListener@2ae032c4, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5a6d931c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3b606079, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5548d5c4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e95bbbb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@48562206, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@700df0dd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@63f8fded]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2025-01-19 23:46:05.224  INFO 51142 --- [    Test worker] i.s.i.a.ArticleRepositoryTransactionTest : Starting ArticleRepositoryTransactionTest using Java 11.0.25 on Siddharthas-MacBook-Air.local with PID 51142 (started by siddhuseelam in /Users/siddhuseelam/spring-boot-realworld-example-app-1)
+2025-01-19 23:46:05.225  INFO 51142 --- [    Test worker] i.s.i.a.ArticleRepositoryTransactionTest : The following profiles are active: test
+2025-01-19 23:46:05.618  INFO 51142 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c28cacee-9496-4824-b683-59d4c260cdc9
+
+2025-01-19 23:46:05.665  INFO 51142 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17a394d2, org.springframework.security.web.context.SecurityContextPersistenceFilter@24fa2e1, org.springframework.security.web.header.HeaderWriterFilter@61adaa04, org.springframework.web.filter.CorsFilter@4ac5bbc8, org.springframework.security.web.authentication.logout.LogoutFilter@11a6e7d4, io.spring.api.security.JwtTokenFilter@4d437408, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@299c20bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@256d5200, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@563d3c53, org.springframework.security.web.session.SessionManagementFilter@162ba19b, org.springframework.security.web.access.ExceptionTranslationFilter@73eb026f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7839cd7]
+2025-01-19 23:46:05.799  INFO 51142 --- [    Test worker] c.n.g.d.w.a.GraphiQLConfigurer           : Configuring GraphiQL to use GraphQL endpoint at '/graphql'
+2025-01-19 23:46:06.016  INFO 51142 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-01-19 23:46:06.017  INFO 51142 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-01-19 23:46:06.017  INFO 51142 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.0.5 by Redgate
+2025-01-19 23:46:06.018  INFO 51142 --- [    Test worker] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:sqlite::memory: (SQLite 3.36)
+2025-01-19 23:46:06.019  INFO 51142 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.001s)
+2025-01-19 23:46:06.020  INFO 51142 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "main"."flyway_schema_history" ...
+2025-01-19 23:46:06.022  INFO 51142 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "main": << Empty Schema >>
+2025-01-19 23:46:06.024  INFO 51142 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "main" to version "1 - create tables"
+2025-01-19 23:46:06.026  INFO 51142 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "main", now at version v1 (execution time 00:00.004s)
+2025-01-19 23:46:06.116  INFO 51142 --- [    Test worker] i.s.i.a.ArticleRepositoryTransactionTest : Started ArticleRepositoryTransactionTest in 0.902 seconds (JVM running for 17.258)
+2025-01-19 23:46:06.128 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.UserMapper.findById       : ==>  Preparing: select id, username, email, password, bio, image from users where id = ?
+2025-01-19 23:46:06.128 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.UserMapper.findById       : ==> Parameters: 5a199cda-af01-4cc5-8009-8f2e6ab43665(String)
+2025-01-19 23:46:06.129 DEBUG 51142 --- [    Test worker] i.s.i.mybatis.mapper.UserMapper.insert   : ==>  Preparing: insert into users (id, username, email, password, bio, image) values( ?, ?, ?, ?, ?, ? )
+2025-01-19 23:46:06.129 DEBUG 51142 --- [    Test worker] i.s.i.mybatis.mapper.UserMapper.insert   : ==> Parameters: 5a199cda-af01-4cc5-8009-8f2e6ab43665(String), aisensiy(String), aisensiy@gmail.com(String), 123(String), bio(String), default(String)
+2025-01-19 23:46:06.129 DEBUG 51142 --- [    Test worker] i.s.i.mybatis.mapper.UserMapper.insert   : <==    Updates: 1
+2025-01-19 23:46:06.130 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findById    : ==>  Preparing: select A.id articleId, A.slug articleSlug, A.title articleTitle, A.description articleDescription, A.body articleBody, A.user_id articleUserId, A.created_at articleCreatedAt, A.updated_at articleUpdatedAt, T.id tagId, T.name tagName from articles A left join article_tags AT on A.id = AT.article_id left join tags T on T.id = AT.tag_id where A.id = ?
+2025-01-19 23:46:06.130 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findById    : ==> Parameters: 57bd2de2-9c67-40b7-b7c8-6d1572199601(String)
+2025-01-19 23:46:06.130 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==>  Preparing: select id, name from tags where name = ?
+2025-01-19 23:46:06.130 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==> Parameters: spring(String)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : ==>  Preparing: insert into tags (id, name) values (?, ?)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : ==> Parameters: 5f79762a-1bf0-409c-8cb5-e2e60dd195d7(String), spring(String)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : <==    Updates: 1
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==>  Preparing: insert into article_tags (article_id, tag_id) values(?, ?)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==> Parameters: 57bd2de2-9c67-40b7-b7c8-6d1572199601(String), 5f79762a-1bf0-409c-8cb5-e2e60dd195d7(String)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : <==    Updates: 1
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==>  Preparing: select id, name from tags where name = ?
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==> Parameters: java(String)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : ==>  Preparing: insert into tags (id, name) values (?, ?)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : ==> Parameters: b4a93903-6c28-4531-83a0-165040ac9379(String), java(String)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : <==    Updates: 1
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==>  Preparing: insert into article_tags (article_id, tag_id) values(?, ?)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==> Parameters: 57bd2de2-9c67-40b7-b7c8-6d1572199601(String), b4a93903-6c28-4531-83a0-165040ac9379(String)
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : <==    Updates: 1
+2025-01-19 23:46:06.131 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insert      : ==>  Preparing: insert into articles(id, slug, title, description, body, user_id, created_at, updated_at) values( ?, ?, ?, ?, ?, ?, ?, ?)
+2025-01-19 23:46:06.132 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insert      : ==> Parameters: 57bd2de2-9c67-40b7-b7c8-6d1572199601(String), test(String), test(String), desc(String), body(String), 5a199cda-af01-4cc5-8009-8f2e6ab43665(String), 2025-01-19 23:46:06.129(Timestamp), 2025-01-19 23:46:06.129(Timestamp)
+2025-01-19 23:46:06.132 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insert      : <==    Updates: 1
+2025-01-19 23:46:06.132 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findById    : ==>  Preparing: select A.id articleId, A.slug articleSlug, A.title articleTitle, A.description articleDescription, A.body articleBody, A.user_id articleUserId, A.created_at articleCreatedAt, A.updated_at articleUpdatedAt, T.id tagId, T.name tagName from articles A left join article_tags AT on A.id = AT.article_id left join tags T on T.id = AT.tag_id where A.id = ?
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findById    : ==> Parameters: ae13fbe4-61a2-49a4-9108-231ac7bd3303(String)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==>  Preparing: select id, name from tags where name = ?
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==> Parameters: spring(String)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : <==      Total: 1
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==>  Preparing: insert into article_tags (article_id, tag_id) values(?, ?)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==> Parameters: ae13fbe4-61a2-49a4-9108-231ac7bd3303(String), 5f79762a-1bf0-409c-8cb5-e2e60dd195d7(String)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : <==    Updates: 1
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==>  Preparing: select id, name from tags where name = ?
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==> Parameters: other(String)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : ==>  Preparing: insert into tags (id, name) values (?, ?)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : ==> Parameters: 1b183f37-6abf-407c-b937-5be4f187ee36(String), other(String)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insertTag   : <==    Updates: 1
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==>  Preparing: insert into article_tags (article_id, tag_id) values(?, ?)
+2025-01-19 23:46:06.133 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==> Parameters: ae13fbe4-61a2-49a4-9108-231ac7bd3303(String), 1b183f37-6abf-407c-b937-5be4f187ee36(String)
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : <==    Updates: 1
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==>  Preparing: select id, name from tags where name = ?
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==> Parameters: java(String)
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : <==      Total: 1
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==>  Preparing: insert into article_tags (article_id, tag_id) values(?, ?)
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : ==> Parameters: ae13fbe4-61a2-49a4-9108-231ac7bd3303(String), b4a93903-6c28-4531-83a0-165040ac9379(String)
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.m.A.insertArticleTagRelation     : <==    Updates: 1
+2025-01-19 23:46:06.134 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insert      : ==>  Preparing: insert into articles(id, slug, title, description, body, user_id, created_at, updated_at) values( ?, ?, ?, ?, ?, ?, ?, ?)
+2025-01-19 23:46:06.135 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.insert      : ==> Parameters: ae13fbe4-61a2-49a4-9108-231ac7bd3303(String), test(String), test(String), desc(String), body(String), 5a199cda-af01-4cc5-8009-8f2e6ab43665(String), 2025-01-19 23:46:06.132(Timestamp), 2025-01-19 23:46:06.132(Timestamp)
+2025-01-19 23:46:06.183 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==>  Preparing: select id, name from tags where name = ?
+2025-01-19 23:46:06.183 DEBUG 51142 --- [    Test worker] i.s.i.m.mapper.ArticleMapper.findTag     : ==> Parameters: other(String)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
